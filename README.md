@@ -19,15 +19,16 @@ On some systems, the default `python` is `python3`.
 
 The minimal set of Python packages you need to install are listed in
 `requirements.txt`. Install them on your local machine, e.g. using your
-system's package manager  (say `apt` on Debian or Ubuntu GNU/Linux) or using
-the `pip` Python package manager
+system's package manager  (say `apt` on Debian or Ubuntu GNU/Linux) or
+the [`pip` Python package manager](https://pip.pypa.io/en/stable)
 
 ```sh
 $ pip install -r requirements.txt
 ```
 
-Note that we by default install `tensorflow-cpu`. If you have a GPU, use
-`tensorflow` instead.
+Note that we install `tensorflow-cpu` by default. If you have a GPU, then you
+may use `tensorflow` instead, which will utilize that. But all examples we use
+are very light weight, so the CPU version will suffice.
 
 You may want to create a [virtual environment][venv_basics] in case you need to
 separate those packages from the rest of your system.
@@ -49,23 +50,33 @@ seaborn              ... ok
 tensorflow.keras     ... ok
 ```
 
-## Conda (local) or Google Colab (cloud)
+## Conda (local)
 
-You can also install Python packages using the [Conda package manager][conda].
-As a fallback, you can also use a could-backed [Jupyter notebook running on
-Google Colab][gco]. Both methods are explained [here][carpentries_setup].
+Instead of using your system tools or `pip`, you can install Python itself and
+packages using the [Conda package manager][conda], which is [explained in more
+detail here][carpentries_setup]. This might be the easiest option on Windows
+systems.
 
+## Google Colab (cloud)
+
+You can use a free could-backed [Jupyter notebook running on Google Colab][gco].
+Using that, most of the packages we require are already installed. You can
+install missing ones by following the Google Colab documentation.
 
 ## Interactive environment
 
 Some of the course code material is presented in form of Jupyter notebooks and
-many people like to use the [Jupyter] interactive environment to run them.
+many people like to use the [Jupyter] interactive environment to run them (e.g.
+Google Colab Jupyter notebook).
 
-You can also execute all code from the lesson notebooks
+But this is not required. If you don't have/want a Jupyter environment, you
+can also execute all code from the lesson notebooks
 
-* in your normal Python interactive shell
-* using the [ipython] interactive shell
-* put the code in normal Python scripts and run it
+* in your normal Python interactive shell (terminal based, start `python` or
+  `python3`)
+* using the [ipython] interactive shell ("Jupyter in the terminal", start
+  `ipython` or `ipython3`)
+
 
 [carpentries_setup]: https://carpentries-incubator.github.io/deep-learning-intro/setup
 [venv_basics]: https://realpython.com/python-virtual-environments-a-primer/
