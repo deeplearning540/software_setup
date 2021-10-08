@@ -63,7 +63,7 @@ many people like to use the [Jupyter] interactive environment to run them.
 
 You can also execute all code from the lesson notebooks
 
-* in your normal Python interactice shell
+* in your normal Python interactive shell
 * using the [ipython] interactive shell
 * put the code in normal Python scripts and run it
 
