@@ -1,0 +1,9 @@
+numpy
+matplotlib
+scikit-learn
+pandas
+seaborn
+tensorflow-cpu >= 2
+
+# if you have a GPU
+##tensorflow >= 2
