@@ -59,9 +59,10 @@ systems.
 
 ## Google Colab (cloud)
 
-You can use a free could-backed [Jupyter notebook running on Google Colab][gco].
-Using that, most of the packages we require are already installed. You can
-install missing ones by following the Google Colab documentation.
+You can use a free cloud-backed [Jupyter notebook running on Google
+Colab][gco]. Using that, most of the packages we require are already installed.
+You can install missing ones by [following the Google Colab
+documentation](https://colab.research.google.com/notebooks/snippets/importing_libraries.ipynb).
 
 ## Interactive environment
 
@@ -74,8 +75,8 @@ can also execute all code from the lesson notebooks
 
 * in your normal Python interactive shell (terminal based, start `python` or
   `python3`)
-* using the [ipython] interactive shell ("Jupyter in the terminal", start
-  `ipython` or `ipython3`)
+* using the more powerful [ipython] interactive shell (start `ipython` or
+  `ipython3`)
 
 
 [carpentries_setup]: https://carpentries-incubator.github.io/deep-learning-intro/setup
