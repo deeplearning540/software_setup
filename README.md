@@ -19,24 +19,30 @@ On some systems, the default `python` is `python3`.
 
 The minimal set of Python packages you need to install are listed in
 `requirements.txt`. Install them on your local machine, e.g. using your
-system's package manager  (say `apt` on Debian or Ubuntu GNU/Linux) or
-the [`pip` Python package manager](https://pip.pypa.io/en/stable)
+system's package manager  (say `apt` on Debian or Ubuntu GNU/Linux).
+
+If you use the [`pip` Python package manager](https://pip.pypa.io/en/stable),
+then you may want to create a [virtual environment][venv_basics] in case you
+need to separate packages from the rest of your system.
 
 ```sh
-$ pip install -r requirements.txt
+$ python3 -m venv course_env && . ./course_env/bin/activate
+```
+
+Install packages:
+
+```sh
+(course_env) $ pip install -r requirements.txt
 ```
 
 Note that we install `tensorflow-cpu` by default. If you have a GPU, then you
 may use `tensorflow` instead, which will utilize that. But all examples we use
 are very light weight, so the CPU version will suffice.
 
-You may want to create a [virtual environment][venv_basics] in case you need to
-separate those packages from the rest of your system.
-
 You can now run
 
 ```sh
-./check_install.py
+(course_env) $ ./check_install.py
 ```
 
 which should print
@@ -50,12 +56,13 @@ seaborn              ... ok
 tensorflow.keras     ... ok
 ```
 
-## Conda (local)
+## Anaconda distribution + Conda package manager (local)
 
 Instead of using your system tools or `pip`, you can install Python itself and
-packages using the [Conda package manager][conda], which is [explained in more
-detail here][carpentries_setup]. This might be the easiest option on Windows
-systems.
+packages using the [Anaconda distribution][anaconda]. Once installed, you can
+install more packages using the [Conda package manager][conda] which comes with
+Anaconda. This might be the easiest option on Windows systems. More details can
+be found [here][carpentries_setup].
 
 ## Google Colab (cloud)
 
@@ -67,8 +74,8 @@ documentation](https://colab.research.google.com/notebooks/snippets/importing_li
 ## Interactive environment
 
 Some of the course code material is presented in form of Jupyter notebooks and
-many people like to use the [Jupyter] interactive environment to run them (e.g.
-Google Colab Jupyter notebook).
+many people like to use the [JupyterLab or Jupyter Notebook][Jupyter]
+interactive environments to run them (e.g. Google Colab Jupyter notebook).
 
 But this is not required. If you don't have/want a Jupyter environment, you
 can also execute all code from the lesson notebooks
@@ -85,3 +92,4 @@ can also execute all code from the lesson notebooks
 [conda]: https://docs.conda.io/en/latest
 [Jupyter]: https://jupyter.org
 [ipython]: https://ipython.org/
+[anaconda]: https://www.anaconda.com/products/distribution
